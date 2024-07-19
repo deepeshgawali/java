@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Employee {
+public class People {
     private String name;
     private Department department;
 
@@ -27,6 +27,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee [name=" + name + ", department=" + department + "]";
+        return "People [name=" + name + ", department=" + department + "]";
     }
 }

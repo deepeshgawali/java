@@ -1,12 +1,15 @@
-package com.spring;
+package org.spring;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Employee {
     private String name;
-    private Department department;
+    private int id;
+
+    @Autowired
+    private Department department; // Autowiring Department
 
     public String getName() {
         return name;
@@ -16,17 +19,24 @@ public class Employee {
         this.name = name;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Department getDepartment() {
         return department;
     }
 
-    @Autowired
     public void setDepartment(Department department) {
         this.department = department;
     }
 
     @Override
     public String toString() {
-        return "Employee [name=" + name + ", department=" + department + "]";
+        return "Employee [name=" + name + ", id=" + id + ", department=" + department + "]";
     }
 }
